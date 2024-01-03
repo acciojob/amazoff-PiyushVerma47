@@ -126,6 +126,10 @@ public class OrderService {
         return orderRepository.getOrdersLeftAfterGivenTimeByPartnerId(time,partnerID);
     }
 
+    public String getLastDeliveryTimeByPartnerId(String partnerId){
+        return orderRepository.getLastDeliveryTimeByPartnerId(partnerId);
+    }
+
     public void deletePartnerById(String partnerID){
         orderRepository.deletePartnerById(partnerID);
     }
