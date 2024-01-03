@@ -55,14 +55,11 @@ public class OrderRepository {
     }
 
     public Integer getOrderCountByPartnerId(String partnerId){
-        Integer count = null;           //need to see
+        Integer count = null;
         if(partnerOrderHashMap.containsKey(partnerId)){
             count = partnerOrderHashMap.get(partnerId).size();
         }
         return count;
-//        int countOfOrder;
-//        countOfOrder = deliveryPartnerHashMap.get(partnerId).getNumberOfOrders();
-//        return countOfOrder;
     }
 
     public List<String> getOrdersByPartnerId(String partnerId){
@@ -79,7 +76,6 @@ public class OrderRepository {
             allOrders.add(orderId);
         }
         return allOrders;
-        //return new ArrayList<>(orderHashMap.keySet());
     }
 
     public Integer getCountOfUnassignedOrders(){
@@ -89,7 +85,6 @@ public class OrderRepository {
             if(!orderPartnerPairMap.containsKey(orderId)) count++;
         }
         return count;
-        //return orderHashMap.size()-orderPartnerPairMap.size();
     }
 
     public Integer getOrdersLeftAfterGivenTimeByPartnerId(String tyme, String partnerId){
