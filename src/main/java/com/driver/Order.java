@@ -16,7 +16,7 @@ public class Order {
         this.deliveryTime = time;
     }
 
-    public String getDeliveryTimeAsString(int time){
+    public static String getDeliveryTimeAsString(int time){
         int hrs = time/60;
         int mins = time % 60;
         String hrString = "";
@@ -28,6 +28,11 @@ public class Order {
         else minString = "" + mins;
 
         return hrString + ":" + minString;
+    }
+
+    public static int getDeliveryTimeAsInt(String timeString){
+        return (Integer.parseInt(timeString.substring(0,2)) * 60 )+
+                Integer.parseInt(timeString.substring(3) );
     }
 
     public String getId() {
