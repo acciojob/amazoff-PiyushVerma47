@@ -127,7 +127,7 @@ public class OrderRepository {
             String partnerId = orderPartnerPairMap.get(orderId);
             orderPartnerPairMap.remove(orderId);
             partnerOrderHashMap.get(partnerId).remove(orderId);
-            deliveryPartnerHashMap.get(partnerId).setNumberOfOrders(partnerOrderHashMap.get(partnerId).size());
+//            deliveryPartnerHashMap.get(partnerId).setNumberOfOrders(partnerOrderHashMap.get(partnerId).size());
         }
     }
 }
